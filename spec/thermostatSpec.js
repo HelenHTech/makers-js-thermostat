@@ -58,4 +58,19 @@ describe("Thermostat", function() {
     expect(thermostat._temperature).toEqual(thermostat._maximum)
   });
 
+  it("Current energy usage - low", function() {
+    thermostat.decrease(3)
+    expect(thermostat.current_energy_usage()).toEqual("low-usage")
+  });
+
+  it("Current energy usage - medium", function() {
+    thermostat.increase(4)
+    expect(thermostat.current_energy_usage()).toEqual("medium-usage")
+  });
+
+  it("Current energy usage - high", function() {
+    thermostat.increase(10)
+    expect(thermostat.current_energy_usage()).toEqual("high-usage")
+  });
+  
 });
