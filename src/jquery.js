@@ -30,5 +30,15 @@ $('#reset').on('click', function() {
   thermostat.reset(); 
   $('#temperature').text(thermostat._temperature);
 })
+
+thermostat.current_energy_usage(); 
+if ("low-usage") {
+  $("#dot").css("background-color", "green");
+} else if ("high-usage") {
+  $("#dot").css("background-color", "red");
+};
+
+
+
 });
 
