@@ -13,6 +13,14 @@ Thermostat.prototype.decrease = function(down) {
   (this._temperature - down >= this._minimum) ? this._temperature -= down : this._temperature = this._minimum;
 }
 
+Thermostat.prototype.up = function(num) {
+  return this._temperature += 1;
+}
+
+Thermostat.prototype.down = function() {
+  return this._temperature -= 1;
+}
+
 Thermostat.prototype.powerSave = function() {
   return this._powerSave;
 }
