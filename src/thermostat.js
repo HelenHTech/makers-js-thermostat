@@ -5,21 +5,13 @@ function Thermostat() {
   this._maximum = 25;
 }
 
-Thermostat.prototype.increase = function(up) {
-  (this._temperature + up <= this._maximum) ? this._temperature += up : this._temperature = this._maximum;
-}
-
-Thermostat.prototype.decrease = function(down) {
-  (this._temperature - down >= this._minimum) ? this._temperature -= down : this._temperature = this._minimum;
-}
-
-Thermostat.prototype.up = function(num) {
-  return this._temperature += 1;
-}
-
 Thermostat.prototype.down = function() {
-  return this._temperature -= 1;
-}
+  (this._temperature - 1 >= this._minimum) ? this._temperature -= 1 : this._temperature = this._minimum;
+ }
+ 
+ Thermostat.prototype.up = function() {
+  (this._temperature + 1 <= this._maximum) ? this._temperature += 1 : this._temperature = this._maximum;
+ }
 
 Thermostat.prototype.powerSave = function() {
   return this._powerSave;

@@ -11,17 +11,28 @@
 
 </head>
 <body>
-<div align="center" style="padding:100px;">
-<h1 id="temperature"></h1><br>
-<button type="button" id="increase" class="btn btn-primary">+</button>
-<button type="button" id="decrease" class="btn btn-primary">-</button>
-<br>
-<button type="button" id="powersave_on" class="btn btn-outline-info">ON</button>
-<button type="button" id="powersave_off" class="btn btn-outline-info">OFF</button>
-<p id="powersave_status">Powersave mode is ON!</p><br>
-<button type="button" id="reset">RESET</button><br><br>
-<h5>Energy Usage</h5><br>
-<h1 id="dotty" class="dot"></h1>
+<div class="container-fluid" align="center" style="padding:100px;">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col melcolor">
+      <h1 id="temperature"></h1><br>
+      <button type="button" id="increase" class="btn btn-primary">+</button>
+      <button type="button" id="decrease" class="btn btn-primary">-</button>
+      <br><br>
+      <button type="button" id="reset" class="btn btn-success">RESET</button><br><br>
+      <button type="button" id="powersave_on" class="btn btn-outline-info">ON</button>
+      <button type="button" id="powersave_off" class="btn btn-outline-info">OFF</button>
+      <br><br>
+      <p id="powersave_status" class="alert alert-info" role="alert">Powersave mode is ON!</p><br>
+      
+      <h5>Energy Usage</h5><br>
+      <h1 id="dotty" class="dot"></h1>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+
 
 </div>
 
