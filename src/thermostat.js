@@ -40,3 +40,4 @@ Thermostat.prototype.current_energy_usage = function() {
     return "high-usage"; 
   }
 }
+

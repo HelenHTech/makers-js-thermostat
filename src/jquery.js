@@ -37,12 +37,18 @@ $('#reset').on('click', function() {
   $('#temperature').text(thermostat._temperature);
 })
 
-thermostat.current_energy_usage(); 
-if (thermostat.current_energy_usage() === "low-usage") {
-  $("#dot").css("background-color", "green");
-} else if ("high-usage") {
-  $("#dot").css("background-color", "red");
-};
+$.get("http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID={APIKEY}", function(cityWeather) {
+  console.log("temp:", cityWeather.main.temp);
+  var currentWeather = cityWeather.main.temp;
+  $('#today').text(currentWeather);
+});
+
+// thermostat.current_energy_usage(); 
+// if (thermostat.current_energy_usage() === "low-usage") {
+//   $("#dot").css("background-color", "green");
+// } else if ("high-usage") {
+//   $("#dot").css("background-color", "red");
+// };
 
 
 
