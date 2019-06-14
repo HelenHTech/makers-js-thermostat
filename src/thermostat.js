@@ -13,6 +13,15 @@ Thermostat.prototype.down = function() {
   (this._temperature + 1 <= this._maximum) ? this._temperature += 1 : this._temperature = this._maximum;
  }
 
+
+Thermostat.prototype.increase = function(up) {
+  (this._temperature + up <= this._maximum) ? this._temperature += up : this._temperature = this._maximum;
+}
+
+Thermostat.prototype.decrease = function(down) {
+  (this._temperature - down >= this._minimum) ? this._temperature -= down : this._temperature = this._minimum;
+}
+
 Thermostat.prototype.powerSave = function() {
   return this._powerSave;
 }

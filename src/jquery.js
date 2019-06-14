@@ -1,5 +1,3 @@
-
-
 $( document ).ready(function() {
  
 var thermostat = new Thermostat();
@@ -37,7 +35,7 @@ $('#reset').on('click', function() {
   $('#temperature').text(thermostat._temperature);
 })
 
-$.get("http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID={APIKEY}", function(cityWeather) {
+$.get("http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=env('APIKEY')", function(cityWeather) {
   console.log("temp:", cityWeather.main.temp);
   var currentWeather = cityWeather.main.temp;
   $('#today').text(currentWeather);
