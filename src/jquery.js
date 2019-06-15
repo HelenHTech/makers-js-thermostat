@@ -43,14 +43,4 @@ $.get("http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPI
   $('#today').text(currentWeather);
 });
 
-// thermostat.current_energy_usage(); 
-// if (thermostat.current_energy_usage() === "low-usage") {
-//   $("#dot").css("background-color", "green");
-// } else if ("high-usage") {
-//   $("#dot").css("background-color", "red");
-// };
-
-
-
 });
-
